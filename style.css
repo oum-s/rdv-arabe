@@ -4,7 +4,8 @@ body {
   text-align: center;
   color: #444;
   margin: 0;
-  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 strong {
@@ -13,22 +14,37 @@ strong {
 
 .para {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 30px;
+  text-align: left;
 }
 
 h1 {
   font-size: 2.5em;
   color: #ff69b4;
+  margin-bottom: 30px;
 }
 
-.calendly-container {
-  margin-top: 40px;
+.reservation , .reservation-info {
+  margin: 1em auto;
+  text-align: center;
+  max-width: 70%;
+}
+.reservation-info {
+  background-color: #f0f8ff;  /* un bleu très clair doux */
+  border-left: 4px solid #6b8e23; /* vert olive */
+  padding: 15px 20px;
+  font-style: italic;
+  color: #333;
+  font-size: 1.1rem;
+  border-radius: 5px;
 }
 
 .flower {
   font-size: 2em;
+  margin-top: 50px;
 }
 
+/* Boutons */
 .button-link {
   display: inline-block;
   margin-top: 20px;
@@ -39,21 +55,23 @@ h1 {
   text-decoration: none;
   border-radius: 15px;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .button-link:hover {
   background-color: #ff69b4;
 }
 
-/* Nouveau styles pour le verset et citation */
+/* Coran verse */
 .coran-verse {
   background-color: #fff0f6;
   border: 2px solid #ffb6c1;
   border-radius: 20px;
   padding: 25px 20px;
-  margin: 30px auto;
-  max-width: 600px;
+  margin: 2em auto;
+  max-width: 60%;
   box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+  font-style: italic;
 }
 
 .verse-arabe {
@@ -78,17 +96,18 @@ h1 {
   font-weight: 500;
 }
 
+/* Tarif table */
 .tarif-table {
   margin: 50px auto;
-  background-color: #fff0f6;
-  border: 2px solid #ffb6c1;
-  border-radius: 20px;
+  /* background-color: white; */
+  /* border: 2px solid #ffb6c1; */
+  /* border-radius: 20px; */
   padding: 30px;
-  max-width: 700px;
+  max-width: 70%;
   box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
   font-family: 'Comic Neue', cursive;
   text-align: center;
-  overflow-x: auto; /* Ajouté pour permettre le défilement horizontal */
+  overflow-x: auto;
 }
 
 .tarif-table h2 {
@@ -108,7 +127,7 @@ h1 {
   border: 1px solid #f3b6cc;
   padding: 12px;
   font-size: 1em;
-  word-wrap: break-word; /* Ajouté pour gérer le texte long */
+  word-wrap: break-word;
 }
 
 .tarif-table thead {
@@ -125,43 +144,229 @@ h1 {
   color: #a83257;
 }
 
-/* Ajoutez ceci à votre fichier CSS */
-@media (max-width: 600px) {
+/* Section infos pratiques */
+.infos-pratiques{
+  background-color: #fff0f6;
+  border: 2px solid #ffb6c1;
+  border-radius: 20px;
+  padding: 25px 20px;
+  max-width: 60%;
+  margin: 30px auto;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+  font-size: 1.1em;
+}
+
+.infos-pratiques ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.infos-pratiques li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.infos-pratiques li::before {
+  content: "🌟";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em;
+}
+
+/* Section apprentissage */
+.apprentissage {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+.apprentissage h2 {
+  color: #d6336c;
+  text-align: center;
+  font-size: 1.7em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+.apprentissage ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  
+}
+
+.apprentissage li {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+/* contact */
+.contact {
+  max-width: 60%;
+  margin: 40px auto 60px;
+  background-color: #fff7fa;
+  border: 1.5px solid #f8cddf;
+  border-radius: 12px;
+  padding: 20px 15px;
+  text-align: center;
+  font-size: 1em;
+  color: #666;
+}
+
+.contact h2 {
+  color: #b56a7a;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.mail-link {
+  color: #a67889;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.mail-link:hover,
+.mail-link:focus {
+  color: #d299aa;
+  text-decoration: underline;
+  outline: none;
+}
+
+
+/* Calendly iframe container */
+.calendly-inline-widget {
+  margin: 0 auto 30px;
+  min-width: 320px;
+  height: 700px;
+  max-width: 80%;
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .para {
+    width: 70%;
+  }
+  .infos-pratiques, .apprentissage, .contact, .tarif-table {
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
   body {
     font-size: 1.1em;
     padding: 10px;
-  }
-  
-  .para {
-    width: 90%;
   }
   
   h1 {
     font-size: 1.8em;
   }
   
-  .calendly-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
   .flower {
     font-size: 1em;
   }
   
-  .tarif-table {
-    padding: 15px; /* Réduire le padding sur les petits écrans */
+  .button-link {
+    font-size: 1em;
+    padding: 10px 20px;
   }
-
+  
+  .tarif-table {
+    padding: 15px;
+  }
+  
   .tarif-table th,
   .tarif-table td {
-    font-size: 0.9em; /* Réduire la taille de la police */
-    padding: 8px; /* Réduire le padding */
+    font-size: 0.9em;
+    padding: 8px;
   }
-
+  
   .tarif-table h2 {
-    font-size: 1.5em; /* Réduire la taille du titre */
+    font-size: 1.5em;
   }
+  
+  /* Form inputs smaller on mobile */
+  .contact input[type="text"],
+  .contact input[type="email"],
+  .contact textarea {
+    font-size: 0.95em;
+  }
+  
+  .contact input[type="submit"] {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+  
+  /* Calendly responsive height */
+  .calendly-inline-widget {
+    height: 500px;
+  }
+  
+  .para {
+    text-align: center;
+  }
+}
+.site-footer {
+  background-color: #a05268; /* Couleur plus foncée, bordeaux doux */
+  color: #f0d9e8; /* Texte clair pour contraster */
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 60px;
+  border-radius: 15px 15px 0 0;
+  font-family: 'Comic Neue', cursive;
+}
+
+.site-footer .contact {
+  margin: 0 auto 25px;
+  background-color: transparent; /* Fond transparent pour s’harmoniser */
+  border: none;
+  padding: 0;
+  color: #f0d9e8;
+}
+
+.site-footer .contact h2 {
+  color: #f9d1e3;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.site-footer .mail-link {
+  color: #f9b9d6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.site-footer .mail-link:hover,
+.site-footer .mail-link:focus {
+  color: #fce3f1;
+  text-decoration: underline;
+  outline: none;
+}
+
+.site-footer .flower {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.info-inscriptions{
+  background-color:#fff3cd; 
+  padding: 1em; 
+  border-left: 4px solid #ffc107;
+   margin-bottom: 1.5em;
+}
+.mentions-legales {
+  border-top: 1px solid #e0cfc4;
+  padding: 2em 1em;
+  margin-top: 3em;
+  font-size: 0.95em;
+  color: #c6c0c0;
+  text-align: left;
+}
+
+.mentions-legales h2 {
+  font-size: 1.2em;
+  color: #f09c71;
+  margin-bottom: 0.5em;
 }
