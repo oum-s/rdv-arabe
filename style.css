@@ -243,70 +243,7 @@ h1 {
   border-radius: 20px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .para {
-    width: 70%;
-  }
-  .infos-pratiques, .apprentissage, .contact, .tarif-table {
-    width: 90%;
-  }
-}
 
-@media (max-width: 700px) {
-  body {
-    font-size: 1.1em;
-    padding: 10px;
-  }
-  
-  h1 {
-    font-size: 1.8em;
-  }
-  
-  .flower {
-    font-size: 1em;
-  }
-  
-  .button-link {
-    font-size: 1em;
-    padding: 10px 20px;
-  }
-  
-  .tarif-table {
-    padding: 15px;
-  }
-  
-  .tarif-table th,
-  .tarif-table td {
-    font-size: 0.9em;
-    padding: 8px;
-  }
-  
-  .tarif-table h2 {
-    font-size: 1.5em;
-  }
-  
-  /* Form inputs smaller on mobile */
-  .contact input[type="text"],
-  .contact input[type="email"],
-  .contact textarea {
-    font-size: 0.95em;
-  }
-  
-  .contact input[type="submit"] {
-    font-size: 1em;
-    padding: 10px 20px;
-  }
-  
-  /* Calendly responsive height */
-  .calendly-inline-widget {
-    height: 500px;
-  }
-  
-  .para {
-    text-align: center;
-  }
-}
 .site-footer {
   background-color: #a05268; /* Couleur plus foncée, bordeaux doux */
   color: #f0d9e8; /* Texte clair pour contraster */
@@ -361,7 +298,7 @@ h1 {
   padding: 2em 1em;
   margin-top: 3em;
   font-size: 0.95em;
-  color: #c6c0c0;
+  color: #8d8a8a;
   text-align: left;
 }
 
@@ -369,4 +306,79 @@ h1 {
   font-size: 1.2em;
   color: #f09c71;
   margin-bottom: 0.5em;
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .para {
+    width: 70%;
+  }
+  .infos-pratiques, .apprentissage, .contact, .tarif-table {
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 1.1em;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  .flower {
+    font-size: 1em;
+  }
+  
+  .button-link {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+  .coran-verse{
+    max-width: none;
+  }
+  .infos-pratiques, .reservation, .reservation-info, .apprentissage, .contact , .calendly-inline-widget{
+    max-width: 90%;
+  }
+  .tarif-table {
+    padding: 15px;
+    max-width: 90%;
+  }
+  
+  .tarif-table th,
+  .tarif-table td {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+  
+  .tarif-table h2 {
+    font-size: 1.5em;
+  }
+  
+  /* Form inputs smaller on mobile */
+  .contact input[type="text"],
+  .contact input[type="email"],
+  .contact textarea {
+    font-size: 0.95em;
+  }
+  
+  .contact input[type="submit"] {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+  
+  /* Calendly responsive height */
+  .calendly-inline-widget {
+    height: 500px;
+  }
+   .infos-pratiques, .apprentissage, .contact, .tarif-table {
+    width: 100%;
+  }
+  .para {
+    text-align: center;
+    max-width: none;
+    width: 90%;
+    margin: 0 auto;
+  }
 }
