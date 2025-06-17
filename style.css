@@ -7,6 +7,15 @@ body {
   padding: 20px;
 }
 
+strong {
+  font-weight: bold;
+}
+
+.para {
+  width: 60%;
+  margin: 0 auto;
+}
+
 h1 {
   font-size: 2.5em;
   color: #ff69b4;
@@ -34,4 +43,125 @@ h1 {
 
 .button-link:hover {
   background-color: #ff69b4;
+}
+
+/* Nouveau styles pour le verset et citation */
+.coran-verse {
+  background-color: #fff0f6;
+  border: 2px solid #ffb6c1;
+  border-radius: 20px;
+  padding: 25px 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+}
+
+.verse-arabe {
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: 'Scheherazade', serif;
+  direction: rtl;
+  margin-bottom: 10px;
+  color: #d6336c;
+}
+
+.verse-francais {
+  font-size: 1.1em;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #a83257;
+}
+
+.citation-umar {
+  font-size: 0.9em;
+  color: #8a2c51;
+  font-weight: 500;
+}
+
+.tarif-table {
+  margin: 50px auto;
+  background-color: #fff0f6;
+  border: 2px solid #ffb6c1;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 700px;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+  font-family: 'Comic Neue', cursive;
+  text-align: center;
+  overflow-x: auto; /* Ajouté pour permettre le défilement horizontal */
+}
+
+.tarif-table h2 {
+  color: #d6336c;
+  margin-bottom: 10px;
+}
+
+.tarif-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.tarif-table th,
+.tarif-table td {
+  border: 1px solid #f3b6cc;
+  padding: 12px;
+  font-size: 1em;
+  word-wrap: break-word; /* Ajouté pour gérer le texte long */
+}
+
+.tarif-table thead {
+  background-color: #ffe4f2;
+}
+
+.tarif-table tbody tr:nth-child(even) {
+  background-color: #fff9fc;
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #a83257;
+}
+
+/* Ajoutez ceci à votre fichier CSS */
+@media (max-width: 600px) {
+  body {
+    font-size: 1.1em;
+    padding: 10px;
+  }
+  
+  .para {
+    width: 90%;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  .calendly-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .flower {
+    font-size: 1em;
+  }
+  
+  .tarif-table {
+    padding: 15px; /* Réduire le padding sur les petits écrans */
+  }
+
+  .tarif-table th,
+  .tarif-table td {
+    font-size: 0.9em; /* Réduire la taille de la police */
+    padding: 8px; /* Réduire le padding */
+  }
+
+  .tarif-table h2 {
+    font-size: 1.5em; /* Réduire la taille du titre */
+  }
 }
